@@ -1,0 +1,74 @@
+{
+  "name": "server-nodejs",
+  "version": "1.0.0",
+  "description": "Server Nodejs Application",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.18",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.1.3",
+    "eslint-plugin-import": "^2.2.0"
+  },
+  "dependencies": {
+    "@types/async": "^2.0.40",
+    "@types/bcryptjs": "^2.4.0",
+    "@types/body-parser": "^1.16.4",
+    "@types/cors": "^2.8.1",
+    "@types/ejs": "^2.3.33",
+    "@types/express": "^4.0.36",
+    "@types/jsonwebtoken": "^7.2.2",
+    "@types/lodash": "^4.14.68",
+    "@types/mongoose-paginate": "^5.0.5",
+    "@types/mongoose-unique-validator": "^1.0.0",
+    "@types/morgan": "^1.7.32",
+    "@types/node": "^7.0.18",
+    "async": "^2.5.0",
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "boom": "^5.1.0",
+    "browser-sync": "^2.18.11",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.3",
+    "debug": "^2.6.4",
+    "domain": "0.0.1",
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "express-fileupload": "^0.1.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-util": "^3.0.8",
+    "js-yaml": "^3.8.4",
+    "jsonfile": "^3.0.0",
+    "jsonwebtoken": "^7.4.1",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.10.1",
+    "mongoose-paginate": "^5.0.3",
+    "mongoose-unique-validator": "^1.0.5",
+    "morgan": "^1.8.2",
+    "path": "^0.12.7",
+    "raml2html": "^3.0.1",
+    "serve-favicon": "^2.4.2",
+    "through2": "^2.0.3",
+    "uuid": "^3.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrbuinguyentuong/sever_nodejs.git"
+  },
+  "keywords": [
+    "server-nodejs"
+  ],
+  "author": "mrbuinguyentuong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrbuinguyentuong/sever_nodejs/issues"
+  },
+  "homepage": "https://github.com/mrbuinguyentuong/sever_nodejs#readme"
+}
