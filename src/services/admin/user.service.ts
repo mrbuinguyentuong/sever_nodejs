@@ -9,8 +9,8 @@ import { IUser } from '../../constants/interfaces'
 //
 class UserServices {
   /**
-     * @param {any} params 
-     * @param {any} callback 
+     * @param {any} params
+     * @param {any} callback
      * @memberof UserServices
      */
   public loginService(params, callback) {
@@ -32,11 +32,9 @@ class UserServices {
       ],
       (err, user: any) => {
         if (!user) return callback(null, Boom.notFound('User not found'))
-
         if (!user.validatePassword(password)) {
           return callback(null, Boom.unauthorized('invalid  password'))
         }
-
         user = user.removePrivacyInfo(user)
         callback(null, {
           user,

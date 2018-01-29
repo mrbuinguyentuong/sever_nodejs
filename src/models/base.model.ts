@@ -46,12 +46,11 @@ class BaseModel extends DatabaseManager {
 
   get(params, callback) {
     const self = this
-    const { queryCondition, limit } = params
-
+    const { queryCondition, limit, isRemove } = params
     params.limit = _.isUndefined(params.limit) ? 24 : params.limit
 
     self.Model
-      .find({ ...queryCondition, isRemove: false })
+      .find({ ...queryCondition, isRemove })
       .limit(limit)
       .exec((err, result) => {
         callback(err, result)

@@ -67,48 +67,48 @@ class PermissionServices {
     PermissionModel.removePermission({ id }, callback)
   }
 
-  public listOption = []
+  // public listOption = []
 
-  public getListOption(req, callback) {
-    const { parent, str, selected } = req.query
+  // public getListOption(req, callback) {
+  //   const { parent, str, selected } = req.query
 
-    this.listOption = []
-    async.waterfall(
-      [
-        done => {
-          PermissionModel.getAllPermissions({}, (err, result) => {
-            done(err, result)
-          })
-        },
-        (list, done) => {
-          this.getListParent(list, parent, str, selected)
-          return done(null, this.listOption)
-        }
-      ],
-      callback
-    )
-  }
-  //Get List Parent
-  public getListParent(list, parent, str, selected) {
-    _.forEach(list, val => {
-      const id = val.id,
-        name = val.name
-      if (val.parent === parent) {
-        if (selected !== '' && id === selected) {
-          this.listOption = [
-            ...this.listOption,
-            { id, name: str + name, selected: true }
-          ]
-        } else {
-          this.listOption = [
-            ...this.listOption,
-            { id, name: str + name, selected: false }
-          ]
-        }
-        this.getListParent(list, id, str + ' -- ', selected)
-      }
-    })
-  }
+  //   this.listOption = []
+  //   async.waterfall(
+  //     [
+  //       done => {
+  //         PermissionModel.getAllPermissions({}, (err, result) => {
+  //           done(err, result)
+  //         })
+  //       },
+  //       (list, done) => {
+  //         this.getListParent(list, parent, str, selected)
+  //         return done(null, this.listOption)
+  //       }
+  //     ],
+  //     callback
+  //   )
+  // }
+  // //Get List Parent
+  // public getListParent(list, parent, str, selected) {
+  //   _.forEach(list, val => {
+  //     const id = val.id,
+  //       name = val.name
+  //     if (val.parent === parent) {
+  //       if (selected !== '' && id === selected) {
+  //         this.listOption = [
+  //           ...this.listOption,
+  //           { id, name: str + name, selected: true }
+  //         ]
+  //       } else {
+  //         this.listOption = [
+  //           ...this.listOption,
+  //           { id, name: str + name, selected: false }
+  //         ]
+  //       }
+  //       this.getListParent(list, id, str + ' -- ', selected)
+  //     }
+  //   })
+  // }
 }
 
 export default new PermissionServices()

@@ -5,10 +5,10 @@ import { upload_type } from '../constants/const'
 
 class FileManager {
 /**
- * 
- * 
- * @param {any} params 
- * @param {any} callback 
+ *
+ *
+ * @param {any} params
+ * @param {any} callback
  * @memberof FileManager
  */
   public saveFile(params, callback) {

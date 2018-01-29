@@ -37,8 +37,8 @@ class APIHandler {
     this.router.use('/upload', fileUpload(), UploadRoute)
 
     /**
-         * Require admin to call API
-         */
+     * Require admin to call API
+     */
 
     //this.router.use(rootHandler.checkAdminPermission)
 

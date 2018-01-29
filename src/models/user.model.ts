@@ -39,10 +39,10 @@ class UserModel extends BaseModel {
   }
 
   /**
-     * 
+     *
      * Function get user by username
-     * @param {any} params 
-     * @param {any} callback 
+     * @param {any} params
+     * @param {any} callback
      * @memberof UserModel
      */
   public getUserByUsername(params, callback) {
@@ -53,6 +53,7 @@ class UserModel extends BaseModel {
         queryCondition: {
           username
         },
+        isRemove: false,
         limit: 1
       },
       (err, result) => {
@@ -82,7 +83,8 @@ class UserModel extends BaseModel {
       {
         query: params,
         limit: null,
-        isRemove: false
+        isRemove: false,
+        //status: true
       },
       (err, result) => {
         if (!err) return callback(null, result)

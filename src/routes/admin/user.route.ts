@@ -24,7 +24,7 @@ class UserRoute extends RootRoute {
     routers.post('/login', (req, res) => {
       const params: IUser = req.body
       Admin.UserServices.loginService(params, (err, result) => {
-        this.responseHandler(res, err, result)
+        return this.responseHandler(res, err, result)
       })
     })
 

@@ -14,6 +14,7 @@ class RootRoute {
 
     if (result)
       return res.send({
+        total: result.length,
         success: 1,
         result: result
       })

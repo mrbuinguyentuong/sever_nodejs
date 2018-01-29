@@ -54,13 +54,13 @@ class PermissionRoute extends RootRoute {
       })
     })
 
-    routers.get('/getListParent', (req, res) => {
-      Admin.PermissionService.getListOption(req, (err, result) => {
-        if (!err) {
-          this.responseHandler(res, Boom.badData(err), result)
-        }
-      })
-    })
+    // routers.get('/getListParent', (req, res) => {
+    //   Admin.PermissionService.getListOption(req, (err, result) => {
+    //     if (!err) {
+    //       this.responseHandler(res, Boom.badData(err), result)
+    //     }
+    //   })
+    // })
 
     this.routers = routers
   }

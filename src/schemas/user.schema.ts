@@ -93,7 +93,6 @@ UserSchema.methods.validatePassword = function(reqPassword: string) {
   if (!reqPassword) {
     return null
   }
-
   return Bcrypt.compareSync(reqPassword, this._doc.password)
 }
 
