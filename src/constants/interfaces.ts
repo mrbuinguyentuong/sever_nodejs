@@ -61,4 +61,41 @@ interface ILocation extends Mongoose.Document {
   isRemove: boolean
 }
 
-export { IUser, ICategory, IPermission, IGroup, IPost, ILocation }
+interface IProducts extends Mongoose.Document { 
+  id: string,
+  title: string,
+  slug: string,
+  image: string,
+  categories: number,
+  description: string,
+  content: string,
+  sort: number,
+  visibled: boolean,
+  isRemove: boolean,
+  createdAt: string,
+  updatedAt: string,
+  deletedAt: string
+}
+interface IProductsCategories extends Mongoose.Document { 
+  id: string,
+  title: string,
+  slug: string,
+  description: string,
+  sort: number,
+  isRemove: boolean,
+  visibled: boolean,
+  createdAt: string,
+  updatedAt: string,
+  deletedAt: string
+}
+
+export {
+  IUser,
+  ICategory,
+  IPermission,
+  IGroup,
+  IPost,
+  ILocation,
+  IProducts,
+  IProductsCategories
+}

@@ -11,7 +11,9 @@ import {
   UploadRoute,
   PermissionRoute,
   GroupRoute,
-  LocationRoute
+  LocationRoute,
+  ProductsRoute,
+  ProductsCategoriesRoute
 } from './admin'
 //
 const rootHandler = new RootRoute()
@@ -63,6 +65,12 @@ class APIHandler {
 
     // Location API Handler
     this.router.use('/admin/location', LocationRoute)
+
+    // Products API Handler
+    this.router.use('/admin/products', ProductsRoute)
+
+    // Products categories API Handler
+    this.router.use('/admin/products/categories', ProductsCategoriesRoute)
   }
 }
 

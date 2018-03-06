@@ -6,6 +6,8 @@ import UserRoute from './user.route'
 import PermissionRoute from './permission.route'
 import GroupRoute from './group.route'
 import LocationRoute from './location.route'
+import ProductsRoute from './products_products.route'
+import ProductsCategoriesRoute from './products_categories.route'
 
 export {
   RootRoute,
@@ -15,5 +17,7 @@ export {
   UserRoute,
   PermissionRoute,
   GroupRoute,
-  LocationRoute
+  LocationRoute,
+  ProductsRoute,
+  ProductsCategoriesRoute
 }
