@@ -10,7 +10,7 @@ const local = {
     secretKey: '123@123'
   },
   database: {
-    host: 'mongodb://root:root@ds121015.mlab.com:21015/sever_nodejs'
+    host: ''
   }
 }
 
@@ -24,7 +24,7 @@ const production = {
     secretKey: '123@123'
   },
   database: {
-    host: 'mongodb://root:root@ds121015.mlab.com:21015/sever_nodejs'
+    host: ''
   }
 }
 
